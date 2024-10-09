@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+class Counter extends StatelessWidget {
+//BINAGO KO YUNG STATEFULL WIDGET TO STATELESSWIDGET
+  const Counter({super.key});
+
+//DELETE SOME LINES OF CODE AS PER INSTRUCTION
+void callBack(){
+  print('NAPINDOT ');
+}
+//GUMAWA AKO NG CALLBACK METHOD
+  @override
+  Widget build(BuildContext context) {
+ 
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        ElevatedButton(
+          onPressed: callBack,
+          // TINAWAG KO DITO YUNG CALLBACK METHOD BY ONPRESSED
+          child: const Text('PINDUTIN MOTO'),
+        ),
+        const SizedBox(width: 16),
+        Text('Count:'),
+      ],
+    );
+  }
+}
+
+void main() {
+  runApp(
+    const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Counter(),
+        ),
+      ),
+    ),
+  );
+}
+
+
